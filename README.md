@@ -2,7 +2,7 @@
 简洁大方的 Material Design 主题。  
 利用久负盛名的 [MDUI](https://www.mdui.org/) 作为框架支撑，在原版主题上稍作修改，没有进行太多改动以保持纸小墨的简洁本质。
 # 使用者们
-[行云小站](https://w568w.github.io/)
+[行云小站](https://w568w.eu.org/)
 # 预览
 ![](https://i.loli.net/2020/04/03/S5f3NnukdhmYLxr.png)
 ![](https://i.loli.net/2020/04/03/J4GaYg9VfhLD3S6.png)
