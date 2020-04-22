@@ -1,0 +1,120 @@
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js">
+</script>
+<header>
+	<div class="mdui-appbar mdui-appbar-scroll-hide">
+		<div class="mdui-toolbar mdui-color-theme">
+			<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+				<i class="mdui-icon material-icons">
+					menu
+				</i>
+			</a>
+			<a href="{{.Site.Root}}/" class="mdui-typo-title">
+				{{.Site.Title}}
+			</a>
+			<div class="mdui-toolbar-spacer">
+			</div>
+			<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
+			  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
+			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索"/>
+			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
+			</div>
+			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
+				<i class="mdui-icon material-icons">
+					refresh
+				</i>
+			</a>
+		</div>
+	</div>
+</header>
+<div class="mdui-drawer mdui-drawer-close" id="left-drawer">
+<div class="mdui-grid-tile">
+	<!--如果需要修改抽屉菜单头像图，请修改以下图片地址-->
+  <a href="javascript:;"><img src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg"/></a>
+  <div class="mdui-grid-tile-actions">
+    <div class="mdui-grid-tile-text">
+      <div class="mdui-grid-tile-title">{{.Site.Title}}</div>
+	  <div class="mdui-grid-tile-subtitle">{{.Site.Subtitle}}</div>
+    </div>
+  </div>
+</div>
+	<div class="mdui-list " style="margin-bottom: 76px;">
+	<a href="{{.Site.Root}}/">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			home
+			</i>
+			<div class="mdui-list-item-content">
+				
+					{{i18n "home"}}
+				
+			</div>
+		</li>
+		</a>
+	<a href="{{.Site.Root}}/archive.html">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			archive
+			</i>
+			<div class="mdui-list-item-content">
+				
+					{{i18n "archive"}}
+				
+			</div>
+		</li>
+		</a>
+		<a href="{{.Site.Root}}/tag.html">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			apps
+			</i>
+			<div class="mdui-list-item-content">
+				
+					{{i18n "tag"}}
+				
+			</div>
+		</li>
+		</a>
+		<a href="{{.Site.Root}}/gays.html">
+		<li class="mdui-list-item mdui-ripple">
+		
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			people
+			</i>
+			<div class="mdui-list-item-content">
+				
+					{{i18n "friends"}}
+				
+			</div>
+			
+		</li>
+		</a>
+		<a href="{{.Site.Root}}/about.w568w.html">
+		<li class="mdui-list-item mdui-ripple">
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			account_circle
+			</i>
+			<div class="mdui-list-item-content">
+				
+					{{i18n "about"}}
+				
+			</div>
+		</li>
+		</a>
+		{{if .Site.Url}}
+		<a href="{{.Site.Root}}/atom.xml">
+		<li class="mdui-list-item mdui-ripple">
+		
+			<i class="mdui-icon material-icons mdui-list-item-icon">
+			rss_feed
+			</i>
+			<div class="mdui-list-item-content">
+				
+					{{i18n "rss"}}
+				
+			</div>
+		</li>
+		</a>
+		{{end}}
+		</li>
+	</div>
+</div>
