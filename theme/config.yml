@@ -5,18 +5,9 @@ copy:
     - robots.txt
 # I18n Support
 lang:
-    home:
-        en: Homepage
-        zh: 主页
-    friends:
-        en: My friends
-        zh: 好基友们
-    about:
-        en: About me
-        zh: 关于我   
     archive:
         en: ARCHIVE
-        zh: 归档
+        zh: 所有文章
         ru: Архив
         ja: アーカイブ
     tag:

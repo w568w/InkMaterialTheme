@@ -20,6 +20,7 @@
                     {{else}}
                     <span id="date" class="date" data-time="{{.Date}}"><span class="from"></span></span>
                     {{end}}
+</span>
                     <span class="tags">{{range .Tags}}<a class="tag" href="{{$.Site.Root}}/tag/{{.}}/index.html">{{.}}</a>{{end}}</span>
                 </section>
                 <article class="content">{{.Content}}</article>

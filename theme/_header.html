@@ -1,6 +1,19 @@
-<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script>
+function search_close(){
+s=$("#search")[0];
+var ev = new Event('input', { bubbles: true});
+ev.simulated = true;
+s.value = '';
+s.dispatchEvent(ev);
+}
 </script>
 <header>
+	<!-- <a class="index" href="{{.Site.Root}}/">
+	{{if .Site.Logo}}<img class="logo" src="{{.Site.Logo}}" />{{end}}
+	{{.Site.Title}}
+	</a> -->
 	<div class="mdui-appbar mdui-appbar-scroll-hide">
 		<div class="mdui-toolbar mdui-color-theme">
 			<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
@@ -15,8 +28,8 @@
 			</div>
 			<div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
 			  <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></button>
-			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索"/>
-			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
+			  <input id="search" class="mdui-textfield-input" type="text" placeholder="搜索" onchange=""/>
+			  <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="search_close()"><i class="mdui-icon material-icons">close</i></button>
 			</div>
 			<a href="javascript:location.reload()" class="mdui-btn mdui-btn-icon">
 				<i class="mdui-icon material-icons">
@@ -28,12 +41,13 @@
 </header>
 <div class="mdui-drawer mdui-drawer-close" id="left-drawer">
 <div class="mdui-grid-tile">
-	<!--如果需要修改抽屉菜单头像图，请修改以下图片地址-->
-  <a href="javascript:;"><img src="https://i.loli.net/2020/03/13/ZEqhb9dWgvH7CoV.jpg"/></a>
+  <a href="javascript:;"><img data-src="https://source.unsplash.com/random/800x600" class="lazyload" alt=""/></a>
   <div class="mdui-grid-tile-actions">
     <div class="mdui-grid-tile-text">
       <div class="mdui-grid-tile-title">{{.Site.Title}}</div>
 	  <div class="mdui-grid-tile-subtitle">{{.Site.Subtitle}}</div>
+	  <div class="mdui-grid-tile-subtitle" style="font-size:11px !important;">图片来自 <a href="https://source.unsplash.com/" style="color:white;text-decoration:underline">@Unsplash</a></div>
+	  
     </div>
   </div>
 </div>
@@ -45,7 +59,7 @@
 			</i>
 			<div class="mdui-list-item-content">
 				
-					{{i18n "home"}}
+					主页
 				
 			</div>
 		</li>
@@ -82,20 +96,20 @@
 			</i>
 			<div class="mdui-list-item-content">
 				
-					{{i18n "friends"}}
+					好基友
 				
 			</div>
 			
 		</li>
 		</a>
-		<a href="{{.Site.Root}}/about.w568w.html">
+		<a href="{{.Site.Root}}/about.{{.Author.Id}}.html">
 		<li class="mdui-list-item mdui-ripple">
 			<i class="mdui-icon material-icons mdui-list-item-icon">
 			account_circle
 			</i>
 			<div class="mdui-list-item-content">
 				
-					{{i18n "about"}}
+					关于我
 				
 			</div>
 		</li>
@@ -115,6 +129,18 @@
 		</li>
 		</a>
 		{{end}}
+		<li class="mdui-list-item mdui-ripple">
+		
+			
+			<div class="mdui-list-item-content" style="font-size:12px">
+				
+					您的网页由&nbsp;Ink&nbsp;提供
+				
+			</div>
+		</li>
 		</li>
 	</div>
+<!-- 	<button class="mdui-btn" mdui-drawer-close>
+		close
+	</button> -->
 </div>
