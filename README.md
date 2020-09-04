@@ -11,8 +11,7 @@
 # 使用者们
 [行云小站](https://w568w.eu.org/)
 # 预览
-![](https://i.loli.net/2020/04/03/S5f3NnukdhmYLxr.png)
-![](https://i.loli.net/2020/04/03/J4GaYg9VfhLD3S6.png)
+![](https://i.loli.net/2020/09/04/CU4iQvPEI8ZBKTM.png)
 # 快速使用
 ## Step 1
 **如果您有`git`工具** :   
